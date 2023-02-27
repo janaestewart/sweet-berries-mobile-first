@@ -330,6 +330,10 @@ a{
         align-items: center;
     }
 
+    .left-side-banner{
+        text-align: left;
+    }
+
     .grid-container{
         grid-template-columns: repeat(3, auto);
         grid-template-rows: auto auto;
