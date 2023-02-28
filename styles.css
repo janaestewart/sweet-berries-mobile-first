@@ -1,4 +1,5 @@
 :root {
+    /* Great use of variables here to standardize your code */
     --background-gray: #f5f3ef;
     --card: #fff;
     --accent: #febd2f;
@@ -16,12 +17,12 @@
     --font-family-Roboto: "Roboto";
 }
 
-body{
+body {
     background-color: var(--background-gray);
 
 }
 
-.content{
+.content {
     padding: 15px 60px 0 60px;
     max-width: 1300px;
     margin: 0 auto;
@@ -33,39 +34,40 @@ h3 {
     font-family: 'Roboto Serif', serif;
 }
 
-p, 
+p,
 button,
 span,
-a, 
+a,
 .nav-links span {
     font-family: 'Roboto', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--text-primary);
 }
 
-.display-flex{
+.display-flex {
     display: flex;
 }
 
-.display-none{
+/* Remove any unused css */
+.display-none {
     /* display: none; */
 }
 
-.hamberger-icon{
+.hamberger-icon {
     width: 40px;
 }
 
-.display-none-until-tablet{
+.display-none-until-tablet {
     display: none;
 }
 
 /* nav */
 
 
-.header{
+.header {
     /* justify-content: space-between; 
     align-items: center; */
 
@@ -73,16 +75,17 @@ a{
     margin-bottom: 40px;
 }
 
-.nav-logo{
+.nav-logo {
     margin: 0 auto;
 }
 
-.nav-links, .nav-btn{
+.nav-links,
+.nav-btn {
     font-weight: var(--font-weight-med);
     font-size: var(--font-size-16);
 }
 
-.nav-btn{
+.nav-btn {
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
@@ -94,7 +97,7 @@ a{
 
 /* banner */
 
-.banner-area{
+.banner-area {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -102,12 +105,12 @@ a{
     text-align: center;
 }
 
-.left-side-banner{
+.left-side-banner {
     margin-right: 20px;
     flex-shrink: 1.5;
 }
 
-.left-side-banner h1{
+.left-side-banner h1 {
     font-size: var(--font-size-64);
     font-weight: var(--font-weight-med);
     margin-bottom: 30px;
@@ -115,7 +118,7 @@ a{
     font-family: var(--font-family-Roboto-Serif);
 }
 
-.p1-font-size{
+.p1-font-size {
     font-size: var(--font-size-24);
     font-weight: var(--font-weight-light);
 
@@ -124,7 +127,7 @@ a{
     margin-bottom: 20px;
 }
 
-.right-side-banner img{
+.right-side-banner img {
     width: 100%;
     border-radius: 40px;
     /* display: block; */
@@ -133,24 +136,26 @@ a{
 
 /* cards area */
 
-.grid-container{
+/* Great use of grid here using all of the best practices  */
+.grid-container {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(6, auto);
     /* gap: 60px 30px; */
     justify-items: center;
     align-items: center;
-    grid-template-areas: 
-        'card1' 
-        'card2' 
+    grid-template-areas:
+        'card1'
+        'card2'
         'card3'
-        'card4' 
-        'card5' 
+        'card4'
+        'card5'
         'card6'
     ;
 }
 
-.card-holder{
+/* Good use of flexbox here for the card container */
+.card-holder {
     background-color: var(--card);
     width: 320px;
     max-width: 350px;
@@ -163,65 +168,66 @@ a{
     margin-bottom: 40px;
 }
 
-.card-holder img{
+/* instead of using bottom and left use top and right */
+.card-holder img {
     position: absolute;
     bottom: 260px;
     left: 260px;
 }
 
-.card-holder h3{
+.card-holder h3 {
     font-family: var(--font-family-Roboto-Serif);
     font-size: var(--font-size-24);
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-.card-holder p{
+.card-holder p {
     font-family: var(--font-family-Roboto);
     font-size: var(--font-size-18);
     font-weight: var(--font-weight-light);
     margin-bottom: 25px;
 }
 
-.card-holder button{
+.card-holder button {
     background-color: var(--card);
     border: .5px solid var(--text-primary);
     border-radius: 20px;
     padding: 10px 20px;
 }
 
-.accent-card{
+.accent-card {
     background-color: var(--accent);
     font-size: var(--font-size-40);
     font-family: var(--font-family-Roboto-Serif);
-    
+
 }
 
 /* .margin-card{
     margin-left: 20px;
 } */
 
-.grid-item-1{
+.grid-item-1 {
     grid-area: card1;
 }
 
-.grid-item-2{
+.grid-item-2 {
     grid-area: card2;
 }
 
-.grid-item-3{
+.grid-item-3 {
     grid-area: card3;
 }
 
-.grid-item-4{
+.grid-item-4 {
     grid-area: card4;
 }
 
-.grid-item-5{
+.grid-item-5 {
     grid-area: card5;
 }
 
-.grid-item-6{
+.grid-item-6 {
     grid-area: card6;
 }
 
@@ -236,7 +242,7 @@ a{
 
 /* footer */
 
-.footer{
+.footer {
     background-color: var(--accent);
     grid-area: footer;
     padding: 24px 0;
@@ -253,49 +259,50 @@ a{
 
 /* media queries */
 
-@media (min-width: 600px) and (max-width: 1240px){
+@media (min-width: 600px) and (max-width: 1240px) {
 
-    .header{
-        justify-content: space-between; 
+    .header {
+        justify-content: space-between;
         align-items: center;
-    
+
     }
 
-    .display-none-until-tablet{
+    .display-none-until-tablet {
         display: contents;
 
     }
 
-    .display-none-until-mobile{
+    .display-none-until-mobile {
         display: none;
     }
 
-    .nav-links, .nav-btn{
+    .nav-links,
+    .nav-btn {
         font-weight: var(--font-weight-med);
         font-size: var(--font-size-16);
     }
-    
-    .nav-links span{
+
+    .nav-links span {
         margin-right: 10px;
     }
 
-    .right-side-banner img{
-    width: 100%;
-    border-radius: 10px;
-    /* display: block; */
+    .right-side-banner img {
+        width: 100%;
+        border-radius: 10px;
+        /* display: block; */
     }
 
 }
 
-@media (min-width: 900px) and (max-width: 1240px){
-    .grid-container{
+@media (min-width: 900px) and (max-width: 1240px) {
+    .grid-container {
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(3, auto);
         justify-items: center;
         align-items: center;
-        grid-template-areas: 
-            'card1 card2' 
-            'card3 card4' 
+        grid-template-areas:
+            'card1 card2'
+            'card3 card4'
             'card5 card6'
         ;
     }
@@ -303,51 +310,48 @@ a{
 
 
 
-@media (min-width: 1241px) and (max-width: 3000px){
-    .header{
-        justify-content: space-between; 
+@media (min-width: 1241px) and (max-width: 3000px) {
+    .header {
+        justify-content: space-between;
         align-items: center;
-    
+
     }
 
-    .nav-links span{
+    .nav-links span {
         margin-right: 10px;
     }
-    
 
-    .display-none-until-tablet{
+
+    .display-none-until-tablet {
         display: contents;
 
     }
 
-    .display-none-until-mobile{
+    .display-none-until-mobile {
         display: none;
     }
 
-    .banner-area{
+    .banner-area {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
-    .left-side-banner{
+    .left-side-banner {
         text-align: left;
     }
 
-    .grid-container{
+    .grid-container {
         grid-template-columns: repeat(3, auto);
         grid-template-rows: auto auto;
         gap: 20px 5px;
         /* justify-content: center; */
         /* justify-items: center;
         align-items: center; */
-        grid-template-areas: 
-            'card1 card2 card3' 
+        grid-template-areas:
+            'card1 card2 card3'
             'card4 card5 card6'
         ;
     }
 
 }
-
-
-
